@@ -12,7 +12,7 @@ RUN easy_install3 pip
 RUN apt-get install -y gcc g++ python3-numpy python3-dev  cmake zlib1g-dev libjpeg-dev xvfb libav-tools xorg-dev python3-opengl
 
 # install git
-RUN apt-get install git
+RUN apt-get install -y git
 
 RUN rm -rf /var/lib/apt
 
