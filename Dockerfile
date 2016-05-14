@@ -26,5 +26,4 @@ RUN pip3 install nose2
 RUN pip3 install pyglet
 
 # install OpenAI Gym (all, exclude MuJoCo)
-RUN git clone https://github.com/openai/gym.git && cd gym
-RUN pip3 install -e '.[all]'
+RUN git clone https://github.com/openai/gym.git && pip3 install -e './gym[all]'
