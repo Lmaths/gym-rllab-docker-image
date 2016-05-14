@@ -11,6 +11,9 @@ RUN easy_install3 pip
 # install dependencies of the Gym
 RUN apt-get install -y gcc g++ python3-numpy python3-dev  cmake zlib1g-dev libjpeg-dev xvfb libav-tools xorg-dev python3-opengl
 
+# install git
+RUN apt-get install git
+
 RUN rm -rf /var/lib/apt
 
 # install nose2 for python test
