@@ -4,13 +4,12 @@ MAINTAINER Jack Liu jackliu.lab@gmail.com
 WORKDIR /home
 
 # install pip3
+RUN apt-get update -y && apt-get install -y python3-setuptools python3-dev build-essential
+
 RUN easy_install3 pip
 
 # install dependencies of the Gym
-RUN apt-get update -y && apt-get install -y gcc g++ python3-numpy python3-dev  cmake zlib1g-dev libjpeg-dev xvfb libav-tools xorg-dev python3-opengl
-
-# install python3-dev for c++ code
-RUN apt-get install -y python3-dev
+RUN apt-get install -y gcc g++ python3-numpy python3-dev  cmake zlib1g-dev libjpeg-dev xvfb libav-tools xorg-dev python3-opengl
 
 RUN rm -rf /var/lib/apt
 
